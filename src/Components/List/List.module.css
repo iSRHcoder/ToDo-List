@@ -1,0 +1,118 @@
+.List {
+  display: inline-block;
+}
+.doneItem {
+  border: 2px solid black;
+  background-color: #ef5482;
+  border-top-right-radius: 10px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.listItem {
+  font-family: sans-serif;
+  font-size: 20px;
+  border: 2px solid black;
+  background-color: #f0a3ba;
+  border-top-right-radius: 10px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.itemContent {
+  margin-left: 50px;
+}
+
+.itemButtons {
+  margin-left: 500px;
+}
+
+.UP,
+.DOWN,
+.DONE,
+.DELETE,
+.save,
+.cancel {
+  margin-left: 10px;
+}
+
+.UP {
+  background-image: url("src/Images/AppBackground/up-arrow-svgrepo-com...png");
+  width: 35px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.DOWN {
+  background-image: url("src/Images/AppBackground/down arrow.png");
+  width: 35px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.DONE {
+  background-image: url("src/Images/AppBackground/done-svgrepo-com.png");
+  width: 35px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.EDIT {
+  margin-left: 100px;
+  background-image: url("src/Images/AppBackground/edit-svgrepo-com.png");
+  width: 35px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.DELETE {
+  background-image: url("src/Images/AppBackground/delete-svgrepo-com (1).png");
+  width: 35px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30%;
+  cursor: pointer;
+}
+
+.save {
+  background-image: url("src/Images/AppBackground/save-svgrepo-com.png");
+  width: 35px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30%;
+  cursor: pointer;
+}
+
+.cancel {
+  background-image: url("src/Images/AppBackground/cancel-svgrepo-com.png");
+  width: 35px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
