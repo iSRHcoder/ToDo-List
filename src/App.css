@@ -6,7 +6,7 @@
 }
 
 .bg-img {
-  background-image: url("src/Images/AppBackground/towfiqu-barbhuiya-jOeh3Lv88xA-unsplash.jpg");
+  background-image: url("/Images/towfiqu-barbhuiya-jOeh3Lv88xA-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -45,7 +45,7 @@
 }
 
 .UP {
-  background-image: url("src/Images/AppBackground/up-arrow-svgrepo-com...png");
+  background-image: url("/Images/up-arrow-svgrepo-com...png");
   width: 3.5rem;
   height: 3.5rem;
   color: rgba(255, 255, 255, 0);
@@ -56,7 +56,7 @@
 }
 
 .DOWN {
-  background-image: url("src/Images/AppBackground/down arrow.png");
+  background-image: url("/Images/down arrow.png");
   width: 3.5rem;
   height: 3.5rem;
   color: rgba(255, 255, 255, 0);
@@ -67,7 +67,7 @@
 }
 
 .DONE {
-  background-image: url("src/Images/AppBackground/done-svgrepo-com.png");
+  background-image: url("/Images/done-svgrepo-com.png");
   width: 3.5rem;
   height: 3.5rem;
   color: rgba(255, 255, 255, 0);
@@ -79,7 +79,7 @@
 
 .EDIT {
   margin-left: 100px;
-  background-image: url("src/Images/AppBackground/edit-svgrepo-com.png");
+  background-image: url("/Images/edit-svgrepo-com.png");
   width: 3.5rem;
   height: 3.5rem;
   color: rgba(255, 255, 255, 0);
@@ -90,7 +90,7 @@
 }
 
 .DELETE {
-  background-image: url("src/Images/AppBackground/delete-svgrepo-com (1).png");
+  background-image: url("/Images/delete-svgrepo-com (1).png");
   width: 3.5rem;
   height: 3.5rem;
   color: rgba(255, 255, 255, 0);
@@ -101,7 +101,7 @@
 }
 
 .save {
-  background-image: url("src/Images/AppBackground/save-svgrepo-com.png");
+  background-image: url("/Images/save-svgrepo-com.png");
   width: 3.5rem;
   height: 3.5rem;
   color: rgba(255, 255, 255, 0);
@@ -112,7 +112,7 @@
 }
 
 .cancel {
-  background-image: url("src/Images/AppBackground/cancel-svgrepo-com.png");
+  background-image: url("/Images/cancel-svgrepo-com.png");
   width: 3.5rem;
   height: 3.5rem;
   color: rgba(255, 255, 255, 0);
