@@ -1,17 +1,21 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home/Home";
-import AppHeader from "./Pages/AppHeader/AppHeader";
-import AppFooter from "./Pages/AppFooter/AppFooter";
+import AppHeader from "./Components/AppHeader/AppHeader";
+import AppFooter from "./Components/AppFooter/AppFooter";
 
 function App() {
   return (
     <div className="App">
-      <AppHeader />
+      <header>
+        <AppHeader />
+      </header>
       <main className="bg-img">
         <Home />
       </main>
-      <AppFooter />
+      <footer>
+        <AppFooter />
+      </footer>
     </div>
   );
 }

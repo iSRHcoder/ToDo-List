@@ -6,7 +6,9 @@ const AppHeader = () => {
     <header>
       <Navbar className={styles.AppHeader}>
         <Container>
-          <Navbar.Brand href="#home">ToDo App</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <span>ToDo App</span>
+          </Navbar.Brand>
         </Container>
       </Navbar>
     </header>

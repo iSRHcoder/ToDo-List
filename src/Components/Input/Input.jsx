@@ -1,9 +1,16 @@
-// eslint-disable-next-line react/prop-types
-const Input = ({ changeHandler, value, enterKeyHandler, placeholder }) => {
+import PropTypes from "prop-types";
+const Input = ({
+  changeHandler,
+  value,
+  enterKeyHandler,
+  placeholder,
+  className,
+}) => {
   return (
     <>
       <input
         type="text"
+        className={className}
         onChange={(e) => {
           changeHandler(e.target.value);
         }}
@@ -17,6 +24,14 @@ const Input = ({ changeHandler, value, enterKeyHandler, placeholder }) => {
       />
     </>
   );
+};
+
+Input.propTypes = {
+  changeHandler: PropTypes.func.isRequired,
+  value: PropTypes.string,
+  enterKeyHandler: PropTypes.func,
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Input;

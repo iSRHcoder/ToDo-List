@@ -1,18 +1,52 @@
 .inputAndButtons {
-  margin-left: 10px;
+  width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+.input {
+  width: 18rem;
+  height: 2.5rem;
+  font-size: 1.8rem;
+}
+.addToListButton {
+  height: 2.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+.clearAllButton {
+  height: 2.5rem;
+  margin-left: 4rem;
+  font-weight: bold;
+}
+.deleteAllDoneButton {
+  height: 2.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+.search {
+  width: 18rem;
+  height: 2.5rem;
+  font-size: 1.8rem;
 }
 
 .list {
-  margin-top: 30px;
+  margin-top: 3rem;
+  width: 70rem;
+  height: fit-content;
 }
 
 .search {
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .todo {
+  width: 70rem;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 5rem;
 }

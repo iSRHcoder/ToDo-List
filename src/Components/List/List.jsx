@@ -1,11 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
+import PropTypes from "prop-types";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import styles from "./List.module.css";
 
-// eslint-disable-next-line react/prop-types
 const List = ({
   items,
   swapItem,
@@ -15,15 +12,11 @@ const List = ({
   cancelBtnhandler,
   changedInputEditHandler,
   saveBtnHandler,
-  searchData,
   searchTerm,
 }) => {
-  console.log("searchData", searchData);
-  console.log("searchTerm", searchTerm);
-  //   const itemsData = searchData ? searchTerm : items;
-
   const listItems = items.map((task, index) => (
     <li
+      style={{ display: `${task.isSearchFieldEmpty ? "none" : "block"}` }}
       key={index}
       className={`p-2 ${task.isDone ? styles.doneItem : styles.listItem}`}
     >
@@ -42,6 +35,7 @@ const List = ({
       {task.isEditing && (
         <>
           <Input
+            className={styles.editInput}
             value={task.editingItem}
             changeHandler={(data) => changedInputEditHandler(index, data)}
           />
@@ -65,7 +59,7 @@ const List = ({
         clickHandler={() => {
           swapItem(index, index - 1);
         }}
-        disabled={index === 0}
+        disabled={index === 0 || searchTerm.length}
       />
 
       <Button
@@ -74,7 +68,7 @@ const List = ({
         clickHandler={() => {
           swapItem(index, index + 1);
         }}
-        disabled={index === items.length - 1}
+        disabled={index === items.length - 1 || searchTerm.length}
       />
 
       {task.isDone && (
@@ -101,6 +95,18 @@ const List = ({
       <ul className={styles.List}>{listItems} </ul>
     </>
   );
+};
+
+List.propTypes = {
+  items: PropTypes.array.isRequired,
+  swapItem: PropTypes.func,
+  doneBtnHandler: PropTypes.func,
+  delBtnHandler: PropTypes.func,
+  editBtnHandler: PropTypes.func,
+  cancelBtnhandler: PropTypes.func,
+  changedInputEditHandler: PropTypes.func,
+  saveBtnHandler: PropTypes.func,
+  searchTerm: PropTypes.array,
 };
 
 export default List;

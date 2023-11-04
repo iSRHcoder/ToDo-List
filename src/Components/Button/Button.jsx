@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 
 const Button = ({
   clickHandler,
@@ -13,6 +13,14 @@ const Button = ({
       </button>
     </>
   );
+};
+
+Button.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+  btnLabel: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Button;
