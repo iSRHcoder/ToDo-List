@@ -12,5 +12,6 @@
   background-color: rgba(235, 187, 201, 0.85);
   text-align: center;
   border-radius: 30px;
-  margin-top: -9rem;
+  position: absolute;
+  top: 8rem;
 }

@@ -15,79 +15,87 @@ const List = ({
   searchTerm,
 }) => {
   const listItems = items.map((task, index) => (
-    <li
-      style={{ display: `${task.isSearchFieldEmpty ? "none" : "block"}` }}
-      key={index}
-      className={`p-2 ${task.isDone ? styles.doneItem : styles.listItem}`}
-    >
-      {!task.isEditing && (
-        <>
-          {task.item}
-          <Button
-            btnLabel="Edit"
-            className={`${styles.EDIT}`}
-            clickHandler={() => editBtnHandler(index)}
-            disabled={task.isDone}
-          />
-        </>
-      )}
+    <>
+      <li
+        style={{ display: `${task.isSearchFieldEmpty ? "none" : "block"}` }}
+        key={index}
+        className={`p-2 ${task.isDone ? styles.doneItem : styles.listItem}`}
+      >
+        <div className={styles.listItemContent}>
+          <div className={styles.ContentEdit}>
+            {!task.isEditing && (
+              <>
+                {task.item}
+                <Button
+                  btnLabel="Edit"
+                  className={`${styles.EDIT}`}
+                  clickHandler={() => editBtnHandler(index)}
+                  disabled={task.isDone}
+                />
+              </>
+            )}
 
-      {task.isEditing && (
-        <>
-          <Input
-            className={styles.editInput}
-            value={task.editingItem}
-            changeHandler={(data) => changedInputEditHandler(index, data)}
-          />
-          <Button
-            btnLabel="Save"
-            className={styles.save}
-            clickHandler={() => saveBtnHandler(index)}
-            disabled={!task.editingItem.trim().length}
-          />
-          <Button
-            btnLabel="Cancel"
-            className={styles.cancel}
-            clickHandler={() => cancelBtnhandler(index)}
-          />
-        </>
-      )}
+            {task.isEditing && (
+              <>
+                <Input
+                  className={styles.editInput}
+                  value={task.editingItem}
+                  changeHandler={(data) => changedInputEditHandler(index, data)}
+                />
+                <Button
+                  btnLabel="Save"
+                  className={styles.save}
+                  clickHandler={() => saveBtnHandler(index)}
+                  disabled={!task.editingItem.trim().length}
+                />
+                <Button
+                  btnLabel="Cancel"
+                  className={styles.cancel}
+                  clickHandler={() => cancelBtnhandler(index)}
+                />
+              </>
+            )}
+          </div>
 
-      <Button
-        className={`${styles.UP}`}
-        btnLabel="UP"
-        clickHandler={() => {
-          swapItem(index, index - 1);
-        }}
-        disabled={index === 0 || searchTerm.length}
-      />
+          <div className={styles.buttons}>
+            <Button
+              className={`${styles.UP}`}
+              btnLabel="UP"
+              clickHandler={() => {
+                swapItem(index, index - 1);
+              }}
+              disabled={index === 0 || searchTerm.length}
+            />
 
-      <Button
-        className={`${styles.DOWN}`}
-        btnLabel="DOWN"
-        clickHandler={() => {
-          swapItem(index, index + 1);
-        }}
-        disabled={index === items.length - 1 || searchTerm.length}
-      />
+            <Button
+              className={`${styles.DOWN}`}
+              btnLabel="DOWN"
+              clickHandler={() => {
+                swapItem(index, index + 1);
+              }}
+              disabled={index === items.length - 1 || searchTerm.length}
+            />
 
-      {task.isDone && (
-        <Button
-          className={`${styles.DELETE}`}
-          btnLabel="DELETE"
-          clickHandler={() => delBtnHandler(index)}
-        />
-      )}
+            {task.isDone && (
+              <Button
+                className={`${styles.DELETE}`}
+                btnLabel="DELETE"
+                clickHandler={() => delBtnHandler(index)}
+              />
+            )}
 
-      {!task.isDone && (
-        <Button
-          className={`${styles.DONE}`}
-          btnLabel="DONE"
-          disabled={task.isEditing}
-          clickHandler={() => doneBtnHandler(index)}
-        />
-      )}
-    </li>
+            {!task.isDone && (
+              <Button
+                className={`${styles.DONE}`}
+                btnLabel="DONE"
+                disabled={task.isEditing}
+                clickHandler={() => doneBtnHandler(index)}
+              />
+            )}
+          </div>
+        </div>
+      </li>
+    </>
   ));
 
   return (

@@ -16,6 +16,7 @@
   list-style: none;
   font-size: 2rem;
 }
+
 .editInput {
   width: 20rem;
   margin-right: 5rem;
@@ -31,6 +32,24 @@
   color: rgb(0, 0, 0);
   margin-bottom: 0.7rem;
   list-style: none;
+}
+
+.listItemContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ContentEdit {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2.5rem;
+}
+
+.buttons {
+  margin-right: 3rem;
 }
 
 .UP,
