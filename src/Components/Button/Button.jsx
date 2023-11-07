@@ -4,7 +4,7 @@ const Button = ({
   clickHandler,
   disabled = false,
   btnLabel = "Click Me",
-  className,
+  className = "",
 }) => {
   return (
     <>
